@@ -1,0 +1,66 @@
+
+
+#certificateDiv{
+    width: 900px;
+    margin: auto;
+    margin-top: 100px;
+    border: var(--color1) solid 3px;
+    border-top: var(--color1) solid 30px;
+    border-bottom: var(--color1) solid 10px;
+}
+
+#certificateHeaderDiv{
+    width: 100%;
+    height: 10px;
+    background-color: var(--color2);
+    margin-bottom: 20px;
+}
+
+#certificateFooterDiv{
+    width: 100%;
+    height: 10px;
+    background-color: var(--color2);
+    margin-bottom: 5px;
+}
+
+#divCompanyLogo{
+    text-align: center;
+    position: relative;
+}
+
+#certificateCompanyLogo{
+    height: 80px;
+
+}
+
+#certificateCompanyLogo2{
+    position: absolute;
+    height: 80px;
+    left: 45px;
+    top: 35px;
+
+}
+
+#divCertificateText{
+    font-style: italic;
+    line-height: 1.5;
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    text-indent: 60px;
+
+}
+
+.certificateValidity{
+    text-align: center;
+}
+
+#divCertificateLogo{
+    margin-top: 20px;
+    text-align: center;
+}
+
+#certificateLogo{
+    height: 150px;
+    margin: auto;
+}

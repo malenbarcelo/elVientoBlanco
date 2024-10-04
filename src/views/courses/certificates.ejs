@@ -1,0 +1,43 @@
+<%- include('../partials/head') %>
+
+<div id="certificateDiv">
+
+    <div id="certificateHeaderDiv"></div>
+
+    <div id="divCompanyLogo">
+        <img src="/images/documentsImages/elVientoBlanco.png" alt="Logo PSI" id="certificateCompanyLogo">
+        <img src="/images/documentsImages/<%= documentTemplate.certificate_logo %>" alt="Logo PSI" id="certificateCompanyLogo2">
+    </div>
+
+    <div id="divCertificateText">
+        <div>
+            Certifico que <b><%= documentData.last_name.toUpperCase() + ' ' + documentData.first_name.toUpperCase() %>, DNI <%= documentData.dni %></b>, participó y aprobó el <b>“Curso  Conducción Segura – Manejo Defensivo de Camionetas 4x2 y 4x4”</b>, <%= documentTemplate.certificate_normatives %>, Teoría. <b><%= documentTemplate.certificate_text1 %></b>.
+        </div>
+        <div class="mtm">
+            <%= documentTemplate.certificate_text2 %>.
+        </div>
+        <div class="mtm">
+            Realizado en la ciudad de Neuquén, <%= issueDateString %>; por lo tanto y como constancia de ello, se hace entrega de correspondiente certificado.
+        </div>
+        
+    </div>
+
+    <div class="certificateValidity mtm <%= expirationDateString == '00/00/0000' ? 'certTransparent' : null %>">
+        <b>Válido hasta el <%= expirationDateString %></b>
+    </div>
+
+    <div id="divCertificateLogo">
+        <img src="/images/documentsImages/<%= documentTemplate.signature1_image %>" alt="Firma1" id="certificateLogo">
+
+    </div>
+    
+    
+
+    <div id="certificateFooterDiv"></div>
+    
+</div>
+
+
+
+
+
