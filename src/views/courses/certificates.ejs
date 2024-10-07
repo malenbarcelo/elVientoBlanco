@@ -13,16 +13,16 @@
         <div>
             Certifico que <b><%= documentData.last_name.toUpperCase() + ' ' + documentData.first_name.toUpperCase() %>, DNI <%= documentData.dni %></b>, participó y aprobó el <b>“Curso  Conducción Segura – Manejo Defensivo de Camionetas 4x2 y 4x4”</b>, <%= documentTemplate.certificate_normatives %>, Teoría. <b><%= documentTemplate.certificate_text1 %></b>.
         </div>
-        <div class="mtm">
+        <div class="mtl">
             <%= documentTemplate.certificate_text2 %>.
         </div>
-        <div class="mtm">
+        <div class="mtl">
             Realizado en la ciudad de Neuquén, <%= issueDateString %>; por lo tanto y como constancia de ello, se hace entrega de correspondiente certificado.
         </div>
         
     </div>
 
-    <div class="certificateValidity mtm <%= expirationDateString == '00/00/0000' ? 'certTransparent' : null %>">
+    <div class="certificateValidity mtl <%= expirationDateString == '00/00/0000' ? 'certTransparent' : null %>">
         <b>Válido hasta el <%= expirationDateString %></b>
     </div>
 

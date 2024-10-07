@@ -328,21 +328,6 @@ const coursesController = {
             const courseData = await coursesQueries.filtrateCourse(course)
             const companies = await formsDataQueries.companies()
 
-            // //get course students
-            // let studentsData = []
-            // if (req.session.userLogged.id_user_categories == 1) {
-            //     studentsData = await formsDataQueries.studentsData(course)
-            // }else{
-            //     studentsData = await formsDataQueries.studentsDataFiltered(company,course)
-            // }            
-                
-            // let datesStrings = []
-
-            // for (let i = 0; i < studentsData.length; i++) {
-            //     let dateString = await datesFunctions.dateToString(studentsData[i].date)
-            //     datesStrings.push({"dateString":dateString})
-            // }
-
             const body = Object.keys(req.body)
 
             //get idFormsData to print and documents to print
@@ -411,7 +396,11 @@ const coursesController = {
                     await page.goto(url, { waitUntil: 'networkidle0' })
                     await page.emulateMediaFeatures([{ name: 'color-gamut', value: 'srgb' }])
             
-                    const pdf = await page.pdf({ printBackground: true, landscape: true })
+                    const pdf = await page.pdf({ 
+                        printBackground: true, 
+                        landscape: true,
+                        form_name:'A4'
+                     })
             
                     await page.close();
             
