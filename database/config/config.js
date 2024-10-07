@@ -1,6 +1,6 @@
-const username = "root"
-const password = "30941767"
-const database = "el_viento_blanco"
+const username = "fevb_adm"
+const password = "=GTJ,i3Lql(%"
+const database = "fevb_db"
 
 module.exports = 
 {

@@ -1,3 +1,3 @@
-const dominio = 'http://localhost:3007/'
+const dominio = 'https://mbarcelo.online/'
 
 module.exports = dominio
