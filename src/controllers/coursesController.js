@@ -392,7 +392,8 @@ const coursesController = {
                     await page.close();
             
                     // Agregar el archivo PDF al archivo zip
-                    archive.append(pdf, { name: fileName + '.pdf' });
+                    archive.append(Buffer.from(pdf), { name: fileName + '.pdf' })
+                    //archive.append(pdf, { name: fileName + '.pdf' });
                 }
             }
 
@@ -415,7 +416,8 @@ const coursesController = {
                     await page.close();
             
                     // Agregar el archivo PDF al archivo zip
-                    archive.append(pdf, { name: fileName + '.pdf' });
+                    archive.append(Buffer.from(pdf), { name: fileName + '.pdf' })
+                    //archive.append(pdf, { name: fileName + '.pdf' })
                 }
             }
             
