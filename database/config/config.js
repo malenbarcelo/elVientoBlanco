@@ -1,6 +1,6 @@
-const username = "fevb_adm"
-const password = "=GTJ,i3Lql(%"
-const database = "fevb_db"
+const username = "fevb2_adm"
+const password = "J^gud@dxI,h1"
+const database = "fevb2_db"
 
 module.exports = 
 {

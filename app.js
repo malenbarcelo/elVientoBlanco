@@ -60,3 +60,5 @@ app.use('/apis',apisRoutes)
 app.use('/users',usersRoutes)
 app.use('/courses',coursesRoutes)
 
+console.log(bcrypt.hashSync('alfredobaduan@elvientoblanco.org.ar',10))
+
