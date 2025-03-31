@@ -16,26 +16,25 @@ window.addEventListener('load',async()=>{
     srg.companyName = companyName.innerText
     srg.idUserCategory = idUserCategory.innerText
 
-    console.log(courseId)
-
     //get data
     srg.courseData = await (await fetch(dominio + 'apis/course-data/' + srg.courseId)).json()
 
     //hide certificates if applies
     if (srg.courseData.includes_certificate == 0) {
-        console.log('dont include')
+        console.log('no')
         srBoxDownload.style.display = 'none'
         thCamera.classList.add('notVisible')
         checkIcon.classList.add('notVisible')       
     }else{
-        console.log('includes')
+        console.log('yes')
         srBoxDownload.style.display = 'block'
         srMainFilters.classList.remove('mbxl')
         thCamera.classList.remove('notVisible')
-        checkIcon.classList.remove('notVisible')
-    }
+        checkIcon.classList.remove('notVisible')    
 
     srg.studentsResults = await (await fetch(dominio + 'apis/students-results/' + srg.companyName + '/' + srg.courseName)).json()
+
+    console.log(srg.studentsResults)
 
     srg.studentsResultsFiltered = srg.studentsResults
 
