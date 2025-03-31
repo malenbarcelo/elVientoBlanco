@@ -25,7 +25,7 @@ async function printTableSR(dataToPrint) {
         const checkIcon = (element.student_image.length != 0 && color == 'greenColor') ? '<input type="checkbox" name="' + element.id + '" id="check_' + element.id + '" class="checkbox1">' : ''
 
         //complete downloadAlloweded
-        if (camera == '' && color == 'greenColor') {
+        if (camera == '<i class="fa-solid fa-camera okIcon" id="image_' + element.id + '"></i>' && color == 'greenColor') {
             srg.downloadAlloweded.push(element.id)
         }
 
