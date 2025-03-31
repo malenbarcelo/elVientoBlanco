@@ -30,7 +30,10 @@ window.addEventListener('load',async()=>{
         srBoxDownload.style.display = 'block'
         srMainFilters.classList.remove('mbxl')
         thCamera.classList.remove('notVisible')
-        checkIcon.classList.remove('notVisible')    
+        checkIcon.classList.remove('notVisible')
+    }
+
+    console.log('before')    
 
     srg.studentsResults = await (await fetch(dominio + 'apis/students-results/' + srg.companyName + '/' + srg.courseName)).json()
 
