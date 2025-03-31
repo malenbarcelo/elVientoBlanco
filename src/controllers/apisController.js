@@ -446,7 +446,7 @@ const apisController = {
       res.status(200).json(uniqueList)
 
     }catch(error){
-      console.group(error)
+      console.log(error)
       return res.send('Ha ocurrido un error')
     }
   },
