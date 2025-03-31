@@ -21,8 +21,8 @@ async function printTableSR(dataToPrint) {
         })
         
         const color = element.passed == 0 ? 'redColor' : (notPassedAssociations > 0 ? 'yellowColor' : 'greenColor')
-        const camera = element.student_image.length != 0 ? '' : '<i class="fa-solid fa-camera errorIcon" id="image_' + element.id + '"></i>'
-        const checkIcon = (camera == '' && color == 'greenColor') ? '<input type="checkbox" name="' + element.id + '" id="check_' + element.id + '" class="checkbox1">' : ''
+        const camera = element.student_image.length != 0 ? '<i class="fa-solid fa-camera okIcon" id="image_' + element.id + '"></i>' : '<i class="fa-solid fa-camera errorIcon" id="image_' + element.id + '"></i>'
+        const checkIcon = (element.student_image.length != 0 && color == 'greenColor') ? '<input type="checkbox" name="' + element.id + '" id="check_' + element.id + '" class="checkbox1">' : ''
 
         //complete downloadAlloweded
         if (camera == '' && color == 'greenColor') {

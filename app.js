@@ -51,7 +51,7 @@ cron.schedule('*/5 * * * *', cronController.getFormsData)
 //cron.schedule('* * * * *', cronController.getFormsData)
 
 //Declare and listen port
-const APP_PORT = 3007
+const APP_PORT = 3010
 app.listen(APP_PORT,() => console.log("Servidor corriendo en puerto " + APP_PORT))
 
 //Routes
