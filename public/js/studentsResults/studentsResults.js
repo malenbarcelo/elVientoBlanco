@@ -9,8 +9,6 @@ import {usippEventListeners} from "./studentsUSIPP.js"
 
 window.addEventListener('load',async()=>{
 
-    console.log('hola')
-
     studentsResultsLoader.style.display = 'block'
 
     srg.courseName = course.innerText
@@ -18,15 +16,19 @@ window.addEventListener('load',async()=>{
     srg.companyName = companyName.innerText
     srg.idUserCategory = idUserCategory.innerText
 
+    console.log(courseId)
+
     //get data
     srg.courseData = await (await fetch(dominio + 'apis/course-data/' + srg.courseId)).json()
 
     //hide certificates if applies
     if (srg.courseData.includes_certificate == 0) {
+        console.log('dont include')
         srBoxDownload.style.display = 'none'
         thCamera.classList.add('notVisible')
         checkIcon.classList.add('notVisible')       
     }else{
+        console.log('includes')
         srBoxDownload.style.display = 'block'
         srMainFilters.classList.remove('mbxl')
         thCamera.classList.remove('notVisible')
