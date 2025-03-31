@@ -9,6 +9,8 @@ import {usippEventListeners} from "./studentsUSIPP.js"
 
 window.addEventListener('load',async()=>{
 
+    console.log('hola')
+
     studentsResultsLoader.style.display = 'block'
 
     srg.courseName = course.innerText
