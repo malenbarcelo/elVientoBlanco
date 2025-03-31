@@ -1,3 +1,3 @@
-const dominio = 'https://fevb.mbarcelo.online/'
+const dominio = 'https://fevb.taidwa.com/'
 
 module.exports = dominio

@@ -21,23 +21,17 @@ window.addEventListener('load',async()=>{
 
     //hide certificates if applies
     if (srg.courseData.includes_certificate == 0) {
-        console.log('no')
         srBoxDownload.style.display = 'none'
         thCamera.classList.add('notVisible')
         checkIcon.classList.add('notVisible')       
     }else{
-        console.log('yes')
         srBoxDownload.style.display = 'block'
         srMainFilters.classList.remove('mbxl')
         thCamera.classList.remove('notVisible')
         checkIcon.classList.remove('notVisible')
     }
 
-    console.log('before')    
-
     srg.studentsResults = await (await fetch(dominio + 'apis/students-results/' + srg.companyName + '/' + srg.courseName)).json()
-
-    console.log(srg.studentsResults)
 
     srg.studentsResultsFiltered = srg.studentsResults
 
