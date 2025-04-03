@@ -11,7 +11,7 @@
 
     <div id="divCertificateText">
         <div>
-            Certifico que <b><%= documentData.last_name.toUpperCase() + ' ' + documentData.first_name.toUpperCase() %>, DNI <%= documentData.dni %></b>, participó y aprobó el <b>“Curso  Conducción Segura – Manejo Defensivo de Camionetas 4x2 y 4x4”</b>, <%= documentTemplate.certificate_normatives %>, Teoría. <b><%= documentTemplate.certificate_text1 %></b>.
+            Certifico que <b><%= documentData.last_name.toUpperCase() + ' ' + documentData.first_name.toUpperCase() %>, DNI <%= documentData.dni %></b>, participó y aprobó el <b> “<%= documentTemplate.course_name %>”</b>, <%= documentTemplate.certificate_normatives %>, Teoría. <b><%= documentTemplate.certificate_text1 %></b>.
         </div>
         <div class="mtl">
             <%= documentTemplate.certificate_text2 %>.
