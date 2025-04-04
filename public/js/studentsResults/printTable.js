@@ -54,17 +54,21 @@ async function printTableSR(dataToPrint) {
                 <th class="${rowClass}">${observations}</th>
         `
 
-        if (srg.courseData.includes_certificate == 1) {
+        if (srg.courseData.includes_certificate == 1 && srg.idUserCategory == 1) {
             html += `
                 <th class="${rowClass}">${ camera }</th>
-                <th class="${rowClass}">${ checkIcon }</th>
-            </tr>
-            `
-        }else{
-            html += `
-                </tr>
             `
         }
+
+        if (srg.courseData.includes_certificate == 1) {
+            html += `
+                <th class="${rowClass}">${ checkIcon }</th>
+            `
+        }
+        
+        html += `
+                </tr>
+            `
 
         counter += 1
     })

@@ -20,14 +20,21 @@ window.addEventListener('load',async()=>{
     srg.courseData = await (await fetch(dominio + 'apis/course-data/' + srg.courseId)).json()
 
     //hide certificates if applies
+    const thCamera = document.getElementById('thCamera')
     if (srg.courseData.includes_certificate == 0) {
         srBoxDownload.style.display = 'none'
-        thCamera.classList.add('notVisible')
+        if (thCamera) {
+            thCamera.classList.add('notVisible')
+        }
+        
         checkIcon.classList.add('notVisible')       
     }else{
         srBoxDownload.style.display = 'block'
         srMainFilters.classList.remove('mbxl')
-        thCamera.classList.remove('notVisible')
+        if (thCamera) {
+            thCamera.classList.remove('notVisible')
+        }
+        
         checkIcon.classList.remove('notVisible')
     }
 
