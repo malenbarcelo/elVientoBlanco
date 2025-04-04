@@ -74,24 +74,44 @@ window.addEventListener('load',async()=>{
     closePopupsEventListeners(closePopups)
 
     //table info events listeners
-    const tableIcons = [
-        {
-            icon:infoIcon,
-            right: srg.courseData.includes_certificate == 1 ? '9%' : '7.5%'
-        },
-        {
-            icon:obsIcon,
-            right:srg.courseData.includes_certificate == 1 ? '6.5%' : '4.5%'
-        },
-        {
-            icon:imageIcon,
-            right:'4%'
-        },
-        {
-            icon:checkIcon,
-            right:'1%'
-        }
-    ]
+    const imageIcon = document.getElementById('imageIcon')
+    let tableIcons = []
+    if (imageIcon) {
+        tableIcons = [
+            {
+                icon:infoIcon,
+                right: srg.courseData.includes_certificate == 1 ? '9%' : '7.5%'
+            },
+            {
+                icon:obsIcon,
+                right:srg.courseData.includes_certificate == 1 ? '6.5%' : '5%'
+            },
+            {
+                icon:imageIcon,
+                right:'4%'
+            },
+            {
+                icon:checkIcon,
+                right:'1%'
+            }
+        ]
+    }else{
+        tableIcons = [
+            {
+                icon:infoIcon,
+                right: srg.courseData.includes_certificate == 1 ? '8%' : '6.5%'
+            },
+            {
+                icon:obsIcon,
+                right:srg.courseData.includes_certificate == 1 ? '5.5%' : '4%'
+            },
+            {
+                icon:checkIcon,
+                right:'3%'
+            }
+        ]
+
+    }
 
     showTableInfo(tableIcons,202,150)
 
