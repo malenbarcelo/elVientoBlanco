@@ -19,8 +19,8 @@ async function usippEventListeners() {
             const fileName = file.name
             const fileExtension = fileName.split('.').pop()
             
-            if (fileExtension != 'jpg' && fileExtension != 'png') {
-                usippError.innerText = 'Las extensiones permitidas son ".jpg" y ".png"'
+            if (fileExtension != 'jpg' && fileExtension != 'png' && fileExtension != 'jpeg') {
+                usippError.innerText = 'Las extensiones permitidas son ".jpg", ".jpeg" y ".png"'
                 usippError.style.display = 'block'
             }else{
                 const formData = new FormData()
