@@ -8,6 +8,7 @@ const profileImagesQueries = {
             const imageName = await db.Profile_images.findOne({
                 where:{dni:dni},
                 raw:true,
+                order:[['id','DESC']]
             })
             if (imageName) {
                 return imageName.image
