@@ -1,1 +1,1 @@
-export const dominio = 'https://fevb.taidwa.com/'
+export const dominio = 'http://localhost:3010/'

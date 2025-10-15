@@ -1,6 +1,6 @@
-const username = "evb_adm"
-const password = "1$8k{nwtN7Q~"
-const database = "evb_db"
+const username = "root"
+const password = "30941767"
+const database = "el_viento_blanco"
 
 module.exports = 
 {
