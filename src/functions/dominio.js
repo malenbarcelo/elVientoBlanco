@@ -1,3 +1,3 @@
-const dominio = 'http://localhost:3010/'
+const dominio = 'https://fevb.taidwa.com/'
 
 module.exports = dominio
